@@ -1,4 +1,4 @@
-Welcome to Lumache's documentation!
+ACCS Work Package 5
 ===================================
 
 **Lumache** (/lu'make/) is a Python library for cooks and food lovers
@@ -20,3 +20,4 @@ Contents
 
    usage
    api
+   sync
