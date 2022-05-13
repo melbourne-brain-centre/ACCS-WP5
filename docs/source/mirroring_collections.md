@@ -1,6 +1,6 @@
-## Sync
+## Mirroring Collections
 
-Research Computing supports several methods of file transfer. File transfers from a local system can be done through a web-based application called _Globus_ or through command-line tools such as secure copy (_scp_), secure ftp (_sftp_) and _rsync_. Some command-line tools may be unavailable on Windows, though alternative
+CVL supports several methods of file transfer. File transfers from a local system can be done through a web-based application called _Globus_ or through command-line tools such as secure copy (_scp_), secure ftp (_sftp_) and _rsync_. Some command-line tools may be unavailable on Windows, though alternative
 applications exist. (e.g., WinSCP, FileZilla)
 
 Data transfers using SSH protocols can be done via CVL login nodes. Transfers via the login nodes work well for small and/or infrequent file transfers, and do not require users to be connected to the internal network. 
@@ -21,7 +21,7 @@ Globus can be used on macOS, Linux, and Windows operating systems and is RC's re
 
 Research Computing storage resources are available via multiple Globus "endpoints." You can connect to an RC endpoint using the "endpoint" field in the Globus web interface and searching for `_________________`. Log into the end point using your Research Computing credentials.
 
-You must also configure a local endpoint to transfer files to or fromyour local computer. You can easily set up a Globus endpoint byinstalling [Globus ConnectPersonal](https://www.globus.org/globus-connect-personal)
+You must also configure a local endpoint to transfer files to or from your local computer. You can easily set up a Globus endpoint by installing [Globus Connect Personal](https://www.globus.org/globus-connect-personal)
 
 Using the web app, connect your local workstation endpoint with the Research Computing endpoint and transfer files easily using the Globus GUI.
 
