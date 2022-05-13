@@ -1,6 +1,13 @@
 ## Mirroring Collections
 
-CVL supports several methods of file transfer. File transfers from a local system can be done through a web-based application called _Globus_ or through command-line tools such as secure copy (_scp_), secure ftp (_sftp_) and _rsync_. Some command-line tools may be unavailable on Windows, though alternative
+---
+**NOTE**
+
+This page is under active development.
+
+---
+
+CVL supports several methods of file transfer. File transfers from a local system can be done through a web-based application called _GLOBUS_ or through command-line tools such as secure copy (_scp_), secure ftp (_sftp_) and _rsync_. Some command-line tools may be unavailable on Windows, though alternative
 applications exist. (e.g., WinSCP, FileZilla)
 
 Data transfers using SSH protocols can be done via CVL login nodes. Transfers via the login nodes work well for small and/or infrequent file transfers, and do not require users to be connected to the internal network. 
@@ -8,49 +15,46 @@ Data transfers using SSH protocols can be done via CVL login nodes. Transfers vi
 ---
 
 
-### Globus transfers
-Globus file transfers are typically initiated through an interactive web application. (Command-line access to Globus is also available, but is beyond the scope of this document.) Globus addresses deficiencies in traditional file-transfer mechanisms by automating large data transfers, resuming failed transfers, distributing large transfers across multiple servers, and brokering direct transfers between remote computing centers.
+### GLOBUS transfers
+GLOBUS file transfers are typically initiated through an interactive web application. (Command-line access to GLOBUS is also available, but is beyond the scope of this document.) GLOBUS addresses deficiencies in traditional file-transfer mechanisms by automating large data transfers, resuming failed transfers, distributing large transfers across multiple servers, and brokering direct transfers between remote computing centers.
 
-Globus can be used on macOS, Linux, and Windows operating systems and is RC's recommended way of transfering data.
+GLOBUS can be used on macOS, Linux, and Windows operating systems.
 
-[Sign into Globus Connect](https://www.globus.org/app/login) by selecting "Monash University" from the dropdown menu and by logging in using your CU IdentiKey and password.
+[Sign into GLOBUS Connect](https://www.globus.org/app/login) by selecting "Monash University" from the dropdown menu and by logging in using your CU IdentiKey and password.
 
-> **_Note for non-Monash users:_** If you are with an institution other than Monash University (e.g. **University of Melbourne**), your institution may still be available for Globus authentication using the InCommon federation. Look for your institution in the dropdown menu (e.g. instead of `Monash University` use `University of Melbourne`) and sign in with your local credentials. If your institution is not listed, you will need to [create a Globus account](https://www.globusid.org/create).
+> **_Note for non-GLOBUS institution users:_** If you are with an institution that does not have GLOBUS installation (e.g. **University of Melbourne**), your institution may still be available for GLOBUS authentication using the InCommon federation. Look for your institution in the dropdown menu (e.g. instead of `Monash University` use `University of Melbourne`) and sign in with your local credentials. If your institution is not listed, you will need to [create a GLOBUS account](https://www.globusid.org/create).
 
 ![](https://raw.githubusercontent.com/ResearchComputing/Research-Computing-User-Tutorials/master/File-Transfers/globus-image-1.png)
 
-Research Computing storage resources are available via multiple Globus "endpoints." You can connect to an RC endpoint using the "endpoint" field in the Globus web interface and searching for `_________________`. Log into the end point using your Research Computing credentials.
+Research Computing storage resources are available via multiple GLOBUS "endpoints." You can connect to an RC endpoint using the "endpoint" field in the GLOBUS web interface and searching for `_________________`. Log into the end point using your Research Computing credentials.
 
-You must also configure a local endpoint to transfer files to or from your local computer. You can easily set up a Globus endpoint by installing [Globus Connect Personal](https://www.globus.org/globus-connect-personal)
+You must also configure a local endpoint to transfer files to or from your local computer. You can easily set up a GLOBUS endpoint by installing [GLOBUS Connect Personal](https://www.globus.org/globus-connect-personal)
 
-Using the web app, connect your local workstation endpoint with the Research Computing endpoint and transfer files easily using the Globus GUI.
+Using the web app, connect your local workstation endpoint with the Research Computing endpoint and transfer files easily using the GLOBUS GUI.
 
 ![](https://raw.githubusercontent.com/ResearchComputing/Documentation/june-updates/File-Transfers/globus-image-2new.PNG)
 
-### Guest Collections (Globus Shared Endpoints)
+### Guest Collections (GLOBUS Shared Endpoints)
 
-GLOBUS node users can nominate a technical contact that is able to create [Globus Guest
-Collections](https://docs.globus.org/how-to/share-files/). Using a Guest Collection (also known as a "Shared Endpoint"), You can share any file or folder that you have access to with anyone who has a Globus account.
+GLOBUS node users can nominate a technical contact that is able to create [GLOBUS Guest
+Collections](https://docs.globus.org/how-to/share-files/). Using a Guest Collection (also known as a "Shared Endpoint"), You can share any file or folder that you have access to with anyone who has a GLOBUS account.
 
 Detailed information on creating Guest Collections is available [at docs.globus.org](https://docs.globus.org/how-to/share-files/).
 
-### Globus to AWS S3 Bucket connection
+### GLOBUS to AWS S3 Bucket connection
 
-Nodes that has license for Globus to AWS S3 bucket connections can allow for transfers to/from local resources to AWS S3 buckets using the familiar Globus web app. For those that would like to use a command-line tool rclone is also available for transfers to/from AWS S3 buckets (see [rclone example](#Rclone)). For _both_ transfer methods it is assumed you already have an AWS S3 bucket already created and available. First search for your S3 bucket in the Globus collections search bar. The first time you establish connection to your S3 bucket you will need to authenticate via 2 sources:
+Nodes that has license for GLOBUS to AWS S3 bucket connections can allow for transfers to/from local resources to AWS S3 buckets using the familiar GLOBUS web app. For those that would like to use a command-line tool rclone is also available for transfers to/from AWS S3 buckets (see [rclone example](#Rclone)). For _both_ transfer methods it is assumed you already have an AWS S3 bucket already created and available. First search for your S3 bucket in the GLOBUS collections search bar. The first time you establish connection to your S3 bucket you will need to authenticate via 2 sources:
 
 1) Your IdentiKey and accept a Duo push
 2) Your AWS Credentials (access key and secret key)
 
-Once you have signed in one time, your AWS credentials will be stored on your individual Globus account. You will now be able to explore the file structure like you would any other Globus endpoint. 
-
-> Note: Transfer speeds from S3 buckets to CVL resources are roughly 20-30 times higher than the opposite direction. We are currently investigating this asymmetry, but if you are in need of fast transfer speeds from CVL resources to your S3 bucket we recommend using rclone.
-
+Once you have signed in one time, your AWS credentials will be stored on your individual GLOBUS account. You will now be able to explore the file structure like you would any other GLOBUS endpoint. 
 
 ### Filezilla
 
-_____ Users also have the option of connecting to RC via _Filezilla_. _Filezilla_ is a file transfer GUI application that can be used on Windows, Mac, and Linux. Simply [install Filezilla](https://filezilla-project.org/) and follow these steps:
+CVL Users also have the option of connecting to remote sites via _Filezilla_. _Filezilla_ is a file transfer GUI application that can be used on Windows, Mac, and Linux. Simply [install Filezilla](https://filezilla-project.org/) and follow these steps:
 
-1. Fill in the hostname, username, and password fields at the top of the application window. Note: RC Users have the choice of selecting a login or data transfer node. You must be on CU Boulder’s internal network if you want to access a data transfer node.
+1. Fill in the hostname, username, and password fields at the top of the application window. Note: CVL Users have the choice of selecting a login or data transfer node. 
 
     - _Login Node_
       - Host: sftp://ip-address
@@ -222,26 +226,14 @@ Rclone is a command line program to manage files on cloud storage. It is a featu
 
 #### How to use rclone with CVL
 
-Since rclone is intended to be used with cloud technologies, any server that can use cloud protocols can use rclone to transfer data. Rclone can be used on the CVL system to connect and transfer data to/from cloud-based storage (e.g. google drive or AWS S3 buckets) as well as locally from your machine to connect to RC storage via ssh/sftp connection.
+Since rclone is intended to be used with cloud technologies, any server that can use cloud protocols can use rclone to transfer data. Rclone can be used on the CVL system to connect and transfer data to/from cloud-based storage (e.g. google drive or AWS S3 buckets) as well as locally from your machine to connect to CVL storage via ssh/sftp connection.
 
 ##### Step 1: Make sure rclone is installed
 
 **On a laptop or desktop:** Before connecting CVL storage resources to your local machine, you will need to first [download](https://rclone.org/downloads/) and [install](https://rclone.org/install/) it according to your system from the rclone [website](https://rclone.org/).
 
 **On CVL:** 
-Rclone has been added to the Summit and Alpine module stacks. To use rclone first first load the cluster-specific SLURM job scheduler instance (either Summit or Alpine in this case) from a *login node*, then ssh to a compile or compute node to access the cluster's module stack:
-- Summit Example
-```
-$ module load slurm/summit  	# Load Summit Slurm Instance
-$ ssh scompile			# Access Summit Compile Node
-$ module load rclone/1.58.0 	# Load rclone module
-```
-- Alpine Example
-```
-$ module load slurm/alpine 	# Load Alpine Slurm Instance
-$ sinteractive 			# Access an Alpine compute node via an interactive job
-$ mosule load rclone/1.58.0 	# Load rclone module
-```
+Rclone has been added to the CVL virtual machine to be used directly from either the command line or remote desktop interface.
 
 ##### Step 2: Configuring rclone remote connections 
 
@@ -271,7 +263,7 @@ acl = private
 
 **Using the rclone prompt to create the .conf file**
 
-Once rclone is available to use run the command `rclone config` to see the options to create the configuration file. This example outlines configuring a connection to an AWS S3 bucket from Research Computing. See our [Google Drive connection](../storage/gdrive.html) and [Local connection to RC](../storage/rclone.md) examples for guides on other rclone connection methods.
+Once rclone is available to use run the command `rclone config` to see the options to create the configuration file. This example outlines configuring a connection to an AWS S3 bucket from Research Computing. See our [Google Drive connection](../storage/gdrive.html) and [Local connection to CVL](../storage/rclone.md) examples for guides on other rclone connection methods.
 
 > _**Note: This example assumes you have an S3 bucket already set up with AWS credentials.**_
 
