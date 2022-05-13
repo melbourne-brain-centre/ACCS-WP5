@@ -1,10 +1,7 @@
-ACCS Work Package 5
-===================================
+Biomedical Imaging Collections and Analysis (BICA)
+==================================================
 
-**Lumache** (/lu'make/) is a Python library for cooks and food lovers
-that creates recipes mixing random ingredients.
-It pulls data from the `Open Food Facts database <https://world.openfoodfacts.org/>`_
-and offers a *simple* and *intuitive* API.
+**BICA** is a collection of medical imaging datasets and analysis tools and documentations developed as part of `Australian Characterisation Commons at Scale (ACCS) <https://ardc.edu.au/project/the-australian-characterisation-commons-at-scale-accs/>`_ and maintained via `ImagingTools <https://www.imagingtools.org.au/>`.
 
 Check out the :doc:`usage` section for further information, including
 how to :ref:`installation` the project.
@@ -21,3 +18,4 @@ Contents
    usage
    api
    sync.md
+
