@@ -10,7 +10,7 @@ This work is licensed under a
 [cc-by-nc-sa-shield]: https://img.shields.io/badge/License-CC%20BY--NC--SA%204.0-lightgrey.svg
 
 1. These scripts are for the ACCS workshop hold in 15th/Nov/2022 by the workin package 5 (Biomedical Imaging Collections and Analysis)
-Please refer to https://imagingtools.au/imaging-tools for more details. All the scripts are based on the MASSIVE@M3 environment
+Please refer to https://imagingtools.au/imaging-tools for more details. All the scripts are based on the MASSIVE@M3 environment.
 2. Please refer to https://3tissue.github.io/doc/single-subject.html for the basic pipeline for one subject
 3. For using the eigenmode decomposition, please refer to http://reuter.mit.edu/software/shapedna/ and have your own license and please cite the following papers:
  (1) M. Reuter, F.-E. Wolter, N. Peinecke, Laplace–Beltrami spectra as ‘Shape-DNA’ of surfaces and solids. Computer-Aided Design 38, 342-366 (2006). https://doi.org/10.1016/j.cad.2005.10.011 
